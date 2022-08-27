@@ -1,0 +1,2197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Učbenik HTML5</title>
+<meta charset="UTF-8" http-equiv="Content-Type" content="text/html;charset=windows-1250" />
+
+        
+		
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+				font-family: Arial, sans-serif;
+			}
+			
+			/*body {
+				margin: 20px;
+				font-size: 12px;
+			}*/
+			
+			body {
+				behavior: url(csshover.htc);
+			}
+			
+			body    {font-size:12pt;       /*velikost besedila*/
+         font-family:      sans-serif;      /*tip besedila*/
+         font-type:        arial;
+         
+		 color:            black;      /*barva besedila*/
+         background-color: lightgrey; /*barva ozadja*/
+		 text-align:       justify; /*poravnava*/
+         margin-right:     1cm; 
+         margin-left:      1cm; 
+         padding-left:     8em;
+				}
+
+			ul {
+				list-style: none;
+				width: 150px;
+			 
+
+			}
+
+			ul a {
+				color: #000;
+				text-decoration: none;
+				display: block;
+				padding: 5px 5px 5px 10px;
+				width: 150px;
+				background: #B3E3B4;/*#FF6262;*/
+			 -moz-border-radius: 5px 10px 5px 10px;
+			}
+			
+			ul a:hover {
+				color: black;/*yellow;*/
+				text-decoration: bold;
+				background: yellow;/*#000099;#780000;red;*/
+			 -moz-border-radius: 5px 5px 5px 15px;
+
+			}
+			
+			ul li {
+				border-bottom: 1px solid #FFF;
+				float: left;
+				position: relative;
+			 -moz-border-radius: 0px 15px 0px 15px;
+			}
+			
+			ul li ul {
+				list-style: none;
+				position: absolute;
+				left: 165px;
+				top: 0;
+				display: none;
+				width: 150px;
+				border-left: 1px solid #FFF;
+			 -moz-border-radius: 15px 15px 0px 15px;
+
+			}
+			
+			ul li:hover ul { display: block; }
+			
+			ul li:hover ul li ul { display: none; }
+			
+			ul li ul li:hover ul { display: block; }
+
+table{ border:         2pt;
+		      
+		      
+				 }
+		th   { 
+		text-align:       center; 
+		
+         background-color: lightgrey;
+				 }
+		td   { text-align:       left;    /*uravnava besedila*/
+         background-color: #ffffcc;
+         padding-left:35px;
+          padding-right:15px;
+          text-align:       justify;
+		 }
+		/*.style1 {
+			font-size: medium;
+		}
+
+		.style2 {
+			margin-left: 40px;
+		}
+
+		.style3 {
+			margin-left: 80px;
+		}*/
+
+
+/*.navbar {
+position: fixed;
+top: .1em;
+left: .5em;
+text-align: left;
+border-width:thin; 
+width: 20em;,
+}
+*/
+.navbar {
+position:fixed;
+top: 1em;
+left: .1em;
+text-align:  left;
+border-width :thin; 
+width: 15em; 
+font-size: 12pt;       /*velikost besedila*/
+font-family: sans-serif;      /*tip besedila*/
+font-type: arial;
+
+}
+/*.left {
+				padding-left:35px;
+				padding-right:15px;
+				padding-top:15px;
+                padding-bottom:15px;
+
+   font-family: 			 monospace;
+   background-color: 	 #ffffcc;
+   border-width: 			 1px;
+   border-color: 			 blue;
+   border-style: 			 none;
+
+			}*/
+		
+</style>
+<script type="text/javascript">
+<!--
+function pokazi(katera){
+	if (document.getElementById){
+document.getElementById(katera).style.visibility = "visible";
+}//ends IE
+
+else{document[katera].visibility = "visible";}
+	}
+	
+	function skrij(zapri){
+	if (document.getElementById){
+document.getElementById(zapri).style.visibility = "hidden";
+}//ends IE
+
+else{document[zapri].visibility = "hidden";}
+	}
+// -->
+</script>	
+		
+</head>
+<body>
+
+<div class="navbar" style="left: 0em; top: 1em; right: 981px">	
+		<ul>
+			<li><a href="#Domov">Domov</a>
+			</li>
+			
+			
+			<li><a href="#Uvod">Uvod</a>
+			</li>
+			
+
+			<li><a href="#Zahvala">Zahvala</a>
+			</li>
+		
+			
+			<li><a href="#WWW">World Wide Web</a>
+			</li>
+			
+			
+			<li><a href="#HTML-teorija">HTML - HyperText Markup Language</a>
+			</li>
+			
+			
+			<li><a href="#XHTML-teorija">XHTML - Extensible Hypertext Markup Language</a>
+			</li>
+			
+			
+			<li><a href="#HTML5-teorija">HTML5</a>		
+			</li>
+			
+			
+			<li><a href="#Zgodovina">Zgodovina</a>
+					<ul>
+					<li><a href="#zgodovina1">Proces Standardizacije</a>
+					<li><a href="#zgodovina2">2008 - Prvi javni delujoč osnutek</a>
+					<li><a href="#zgodovina3">2011 - Last Call</a>
+					<li><a href="#zgodovina4">2012 - Kandidat priporočila</a>
+					<li><a href="#zgodovina5">2014 - Predlagano priporočilo</a>
+					<li><a href="#zgodovina6">Narčt za leto 2014</a>
+					<li><a href="#zgodovina7">Jedro HTML specifikacije</a>
+					<li><a href="#zgodovina8">Lasnosti in API</a>
+					</ul>
+			</li>
+			
+			
+			<li><a href="#Funkcije">Funkcije</a>
+					<ul>
+					<li><a href="#funkcija1">Markup</a>
+					<li><a href="#funkcija2">Novi Api</a>
+					<li><a href="#funkcija3">XHTML5 (XML-oblikovan HTML5)</a>
+					<li><a href="#funkcija4">Reševanje napak</a>
+					<li><a href="#funkcija5">Popularnost</a>
+					<li><a href="#funkcija6">Razlika med HTML5 ter HTML4.01 in XHTML1.X</a>
+					</ul>
+			</li>
+			
+			<li><a href="#Logo">Logo</a>
+			</li>
+			
+			<li><a href="#DRM">Urejanje digitalnih pravic (DRM)</a>
+			</li>
+			
+			<li><a href="#HTML-elementi">HTML elementi</a>
+					<ul>
+					<li><a href="#HTMLe1">Elementi dokumentov in meta podatkov</a>
+					<li><a href="#HTMLe2">Tekstovni elementi</a>
+					<li><a href="#HTMLe3">Elementi za združitev</a>
+					<li><a href="#HTMLe4">Elementi za delitev</a>
+					<li><a href="#HTMLe5">Elementi za ustvarjanje tabel</a>
+					<li><a href="#HTMLe6">Elementi za ustvarjanje obrazcev</a>
+					<li><a href="#HTMLe7">Elementi za vključitev vsebine</a>
+					</ul>
+			</li>
+			
+			<li><a href="#Opisi">Opisi posameznih značk</a>
+					<ul>
+					<li><a href="#opis1">Značke za dokumente in meta podatke</a>
+					<li><a href="#opis2">Značke za urejanje besedila</a>
+					<li><a href="#opis3">Značke za združitev</a>
+					<li><a href="#opis4">Elementi za delitev</a>
+					<li><a href="#opis5">Značke za tabele</a>
+					<li><a href="#opis6">Značke za vključevanje vsebine</a>
+					</ul>
+			</li>
+			
+			<li><a href="#Zaključek">Zaključek</a>
+			</li>
+			
+			
+</ul>
+</div>
+
+	
+<a name="Domov"></a>
+<div>
+<center><h1>Učbenik HTML5</h1></center><br />
+<br />
+
+	
+	<br />	<hr>
+	
+<a name="Uvod"></a>
+<div>
+<h1>Uvod</h1><br />
+<br />
+
+V tem učbeniku se boste lahko naučili programski jezik HTML5, njegovo zgodovino ter seveda vse na splošno. Ko se odločiš da bi se rad naučil programirat je zelo dobro vedeti kaj bi rad programiral tako da se lahko odločiš da za programski jezik. Ta učbenik se predvsem osredotoči na izdelavi spletnih strani ter spletnih aplikacij.
+
+</div>
+	<br />	<hr>
+	
+	<br><br>
+<a name="Zahvala"></a>
+<div>
+<h1>Zahvala</h1><br />
+<br />
+
+Rada se bi zahvalila mentorju, ki je bil zelo spodbuden. Rada se mu bi tudi zahvalila za vse nasvete, ki jih je dal, saj brez njih verjetno ne bi uspela dokončati ter narediti naloge.
+
+</div>
+	<br />	<hr>
+	
+	<br><br>
+<a name="WWW"></a>
+<div>
+<h1>World Wide Web</h1><br />
+<br />
+
+Svetovni splet, ki ima angleško kratico WWW (World Wide Web ali W3) je porazdeljen sistem hipertekstovnih dokumentov, ki deluje v omrežju. Z brskalnikom (Chrome, Firefox, Internet Explorer) lahko te hiper tekstovne dokumente gledamo oziroma beremo, te strani lahko vsebujejo besedila, slike, video posnetke ter ostale multimedije, med hipertekstovnimi datotekami potujemo oziroma brskamo s pomočjo hiperpovezav.
+<br><br>
+Tim Berners-Lee, britanski računalniški znanstvenik in bivši zaposleni CERN-a, se obravnava kot oče oziroma izumitelj svetovnega spleta. 12 marca 1989 je Berners-Lee napisal predlog za to kar bo sčasoma postalo svetovni splet. Predlog ki je bil podan 1989 je bil namenjen bolj učinkoviti komunikacijski sistem na CERN-u, toda Berners-Lee in belgijski računalniški znanstvenik Robert Cailliau sta leta 1990 predlagala uporabo hypertesktovnih datotek, ki bi povezalo in omogočilo dostop do različnih informacij ki bi bile kot vozlišča katera bi uporabnik lahko brskal po svoji volji. Berners-Lee je končal prvo spletno stran decembra tistega leta. Prvi test je bil končan okoli 20 decembra 1990, Berners-Lee je poročal o projektu v novinarski skupini alt.hypertext, 7 avgusta 1991.
+
+</div>
+	<br />	<hr>
+	
+	<br><br>
+<a name="HTML-teorija"></a>
+<div>
+<h1>HTML - HyperText Markup Language</h1><br />
+<br />
+
+HTML ali označevalni jezik hiperteksta je standardni označevalni jezik, ki se uporablja za izdelavo spletnih strani. Je nabor oznak (tags), ki predstavljajo razdelke vsebine spletne strani in so namenjene opisu vsebine strani.
+<br><br>
+HTML je produkt SGMLja (Standard Generalized Markup Language ali standardni generalizirani označevalni jezik) - kompleksne tehnične specifikacije, ki opisuje označevalne jezike. To so označevalni jeziki, ki jih uporabljamo med izmenjavo, urejanjem in objavljanjem elektronskih dokumentov, za kar je bil HTML primarno ustvarjen. Še posebej je olajšal izmenjavo z vključitvijo možnosti, da poveže dokumente elektronsko z uporabo hiperpovezav.
+<br><br>
+HTML2.0 je razvila HTML delovna skupina IETF-a (internetna inženirska projektna skupina). Postavil je standarde za osnovne funkcije HTML, ki temeljijo na obstoječi praksi v letu 1994. HTML3.2 (1996) je osnovnim funkcijam dodal širok nabor, kot so tabele, aplikacije, nadskript in podskript. HTML4.0 (1997) je korakal proti temu, da dokumenti postanejo mednarodni in s tem svetovni splet res postane globalen. HTML4.01 je podprl več multimedijskih možnosti, skriptnih jezikov in stilov. Za njo pa se je razvil HTML5, ki je najnovejša velika verzija HTML.
+
+</div>
+	<br />	<hr>
+	
+	<br><br>
+<a name="XHTML-teorija"></a>
+<div>
+<h1>XHTML - Extensible Hypertext Markup Language</h1><br />
+<br />
+
+XHTML je v družini XML (Extensible Markup Language) označevalnih jezikov ki posnema oziroma izboljšuje bolj poznan HTML. HTML ki je predhodnik HTML5 je bil definiran z SGML (Standard Generalized Markup Language), fleksibilna označevalna struktura, XHTML je aplikacija XML, podmnožica SGML ki je veliko bolj omejujoča. XHTML dokumenti so zelo dobro oblikovani in lahko zato razčlenimo standardno XML členitev, za razliko od HTML, ki potrebuje prizanesljiv HTML členitvenik.
+<br><br>
+XHTML 1.0 je postal WWW konzorcij (W3C - World Wide Web Consortium) 26. Januarja 2000. XHTML 1.1 postal W3Cjeva predloga 31. Maja 2001. Standard poznan kot XHTML5 se razvija kot XML priredba HTML5 specifikacije.
+
+</div>
+	<br />	<hr>
+	
+	<br><br>
+<a name="HTML5-teorija"></a>
+<div>
+<h1>HTML5</h1><br />
+<br />
+
+Je tehnološko jedro označevalnega jezika interneta, ki se uporablja za oblikovanje in predstavitev vsebine za svetovni splet. Od oktobra 2014 je to dokončna in popolna peta revizija HTML standarda World Wide Web Consortium (W3C). Prejšna različica, HTML 4 je bila standardizirana v leto 1997.
+<br><br>
+Njen temeljni cilji so izboljšati jezik s podporo za najnovejše multimedije medtem in ohranjati lažjo berljivost za ljudi ter dosledno razumejoče za računalnike in naprave. (web brskalnike, itd.). HTML5 bi naj vključeval ne le HTML4, temveč tudi XHTML1 in DOM 2 HTML.
+<br><br>
+Po njegovih neposrednih predhodnikih HTML4.01 in XHTML1.1, je HTML5 odziv ne dejstvo da sta HTML in XHTML v skupni uporabi na svetovnem spletu mešanica funkcij uvedene z različnimi specifikacijami, skupaj z tistimi, ki so nastali s brskalniki. Prav tako je to poskus opredeliti enoten označevalni jezik, ki se lahko piše v HTML ali XHTML. Vključuje podrobne procesne module za spodbujanje bolj interoperabilne implementacije, razširja, izboljšuje in racionalizira označbe za dokumente, ter predstavi označbe in programske aplikacijske vmesnike za kompleksne spletne aplikacije. Iz istih razlogov je HTML5 kandidat za cross-platform (univerzalne; sodelovanje različnih operacijskih sistemov v enem programu) mobilne aplikacije. Veliko funkcij HTML5 je bilo zgrajeni oziroma narejenih z premislekom da bo lahko delalo tudi na šibkih napravah, kot so pametni telefoni in tablice. Decembra 2011 je raziskovalno podjetje Strategy Analytics napovedalo da bodo telefoni s podporo za HTML5 na vrhu ene milijarde v leti 2013.
+<br><br>
+HTML5 doda številne nove skladenjske (sintaktične; označevalne) funkcije. Ti vključujejo nove &lt;video&gt;, &lt;audio&gt; in &lt;canvas&gt; elemente, kot tudi integracijo razširjevanja vektorske grafike (SVG; Scalable Vector Graphics), ter nadomesti generične &lt;object&gt; oznake, doda tudi MathML za matematične formule. Te funkcije so zasnovane, da bi bilo enostavno vključevati ter kontrolirati multimedijo in grafične vsebine na spletu brez zanašanja na lastniške module in API-je. Drugi novi elementi, kot so &lt;section&gt;, &lt;article&gt;, &lt;header&gt; in &lt;nav&gt;, so namenjeni za obogatitev semantičnost vsebine dokumentov. Novi atributi so bili uvedeni z istim namenom, med tem pa je bilo tudi nekaj elementov in atributov odstranjenih. Nekateri elementi, kot so &lt;a&gt;, &lt;cite&gt; in &lt;menu&gt; so bili spremenjeni, ponovno opredeljeni ali standarizirani. API-ji in Document Object Model (DOM) so fundamentalni deli specifikacije HTML5. HTML5 tudi opredeli in v nekaterih detajlih potrebuje procesiranje za neveljavne dokumente, tako da bodo popravljati sintaktične napake univerzalno na vseh brskalnikih ter drugih uporabnikih jezika.  
+
+</div>
+	<br />	<hr>
+	
+<br><br>
+<a name="Zgodovina"></a>
+<div>
+<h1>Zgodovina</h1><br />
+<br />
+
+Skupina za razvijanje spletne označevalniške aplikacijske tehnologije (WHATWG - Web Hypertext Application Technology Working Group) je začelo delati na novih standardih leta 2004. Takrat že HTML4.01 ni bil posodobljen od leta 2000 in World Wide Web Consortium (W3C)  se je osredotočal na razvijanje XHTML2.0. Leta 2009 je W3C dovolil skupini za razvijanje XHTML2.0 da jim licenca propade in se odločili da je ne bodo obnovili. W3C in WHATWG trenutno delata skupaj na HTML5.
+Čeprav HTML5 pogosto primerjajo z Adobe Flash, sta si tehnologiji zelo drugačni. Obe vključujeta funkcije za predvajanje audio in video znotraj spletnih strani, ter obe imata podporo za Scalable Vector Graphics oziroma podpora za spremenljive vektorske grafike. HTML5 samega po sebi ne moremo uporabljati za animiranje ali interaktivnost, lahko pa dosežemo te funkcionalnosti s implementacijo CSS ali JavaScript. 
+<br><br>
+Čeprav je HTML5 bil poznan med razvijalci že nekaj let, je postal tema za mainstream medije okoli Aprila 2010, zatem ko je Applov Steve Jobs objavil javno pismo naslovljeno “Thoughts on Flash” oziroma “Misli o Flash-u” kjer je ugotavljal da Flash ni več obvezen za gledanje video posnetkov ali za delovanje drugih spletnih vsebin, ter da bodo novi odprti standardi ki so ustvarjeni za mobilne naprave zmagale. To je razplamenelo debate v skupinah razvijalcev spletnih storitev, kjer so nekateri predlagali da HTML5 omogoča izboljšano funkcionalnost, razvijalci morajo imeti v mislih podporo HTML5 na različnih brskalnikih ter ostale razlike med HTML5 in Flash. V Začetku Novembra 2011 je Adobe naznanil da bo prekinil razvoj Flasha za mobilne naprave in se bo osredotočil v razvoj orodij za HTML5.
+<br><br><br>
+
+<a name="zgodovina1"></a>
+<h2>Proces Standardizacije</h2><br>
+Mozilla Foundation in Opera Software za predstavila dokument o njunem stališču na World Wide Web Consortium (W3C) delavnicah v juniju 2004, ter se osredotočijo na kopatibilnost s starejšimi verzijami že obstoječih brskalnikov, vključno s prvim osnutkom specifikacij za spletne obrazce (Web Forms 2.0). Na delavnicah so sklenili z glasovanjem, 8 za, 14 proti, za nadaljevanje dela na HTML. Takoj po delavnici je se je ustanovil WHATWG z namenom da bo začela delati delo ki je bilo opisano v predstavljenem dokumentu, naznanili so tudi drugi osnutek Web Applications 1.0. Te dve specifikaciji sta se pozneje združili in ustvarili HTML5. Specifikacija HTML5 je bila prevzeta kot začetna točka delovne skupine W3C leta 2007.
+<br><br><br>
+
+<a name="zgodovina2"></a>
+<h2>2008 - Prvi javni delujoč osnutek</h2><br>
+WHATWH (Web Hypertet Application Technology Working Group) je objavilo prvi delujoči osnutek specifikacije, 22. januarja 2008. Deli HTML5 so bili implementirani v brskalnike čeprav HTML5 še ni dosegel končnega priporočenega statusa.
+<br><br><br>
+
+<a name="zgodovina3"></a>
+<h2>2011 - Last Call</h2><br>
+14. februarja 2011, W3C podaljša listino njegove delovne skupine HTML z jasnimi mejniki za HTML5. Maja 2011 je delovna skupina napredovala in naznanila da je HTML5 v stopnji “Last Call”, ter s tem povabila skupnosti zunaj in znotraj W3C da potrdijo tehnično ustreznost specifikacije. W3C razivja celovitno testno verzijo z namenom širše interoperabilnosti za popolno specifikacijo do leta 2014, ter je sedaj ciljni datum za priporočilo. v januarju je WHATWH preimenovalo svoje živeče HTML5 standarde v HTML. W3C kljub temu nadaljuje svoje projekte z namenom da bodo lahko dali HTML5 v javnost.
+<br><br><br>
+
+<a name="zgodovina4"></a>
+<h2>2012 - Kandidat priporočila</h2><br>
+Julija 2012, se WHATWG in W3C odloči za separacijo. W3C je nadaljevalo delo na HTML5, ter se osredotočilo na enotni definicijski standard, ki ga WHATWG vidi oziroma obravnava kot “snapshot” oziroma “osnutek”. WHATWG nadaljuje svoje delo z HTML5 kot “Living Standard” oziroma “živi standard”. Koncept živega standarda je da se nikoli ne zaključi in je vedno nadgraduje in izboljšuje. Nove funkcije se lahko dodajo toda funkcionalno ne bodo odstranjene. Decembra 2012 je W3C oblikovalo HTML5 kot kandidata priporočila. Kriterij za napredovanje k W3C priporočitvi je “two 100% complete and fully interoperable implementations” oziroma imeti dva popolnoma interoperacijska in izpopoljena modula.
+<br><br><br>
+
+<a name="zgodovina5"></a>
+<h2>2014 - Predlagano priporočilo in priporočilo</h2><br>
+Septembra 2014 je W3C premaknilo HTML5 na predlagano priporočilo. 28. oktobra 2014 pa je HTML5 bil izdan kot W3C predloga, kar je pomenilo da je bil proces specifikacije končan.
+<br><br><br>
+
+<a name="zgodovina6"></a>
+<h2>Načrt za leto 2014</h2><br>
+Septembra 2012 je W3C predlagalo plan za izdajo stabilne verzije HTML5 predloge do konca leta 2014 in HTML5.1 specifikacijsko predlogo do konca leta 2016.
+<br><br><br>
+
+<a name="zgodovina7"></a>
+<h2>Jedro HTML specifikacij</h2><br>
+Kominirane časovnice za HTML5.0, HTML5.1, HTML5.2:<br>
+
+<table border="1" style="width:100px">
+	<tr>
+		<td></td>
+		<td>2012</td>
+		<td>2013</td>
+		<td>2014</td>
+		<td>2015</td>
+		<td>2016</td>
+	</tr>
+
+		<tr>
+		<td>HTML5.0</td>
+		<td>kandidat priporočila</td>
+		<td>klic za pregled</td>
+		<td>priporočilo</td>
+		<td></td>
+		<td></td>
+	</tr>
+		<tr>
+		<td>HTML5.1</td>
+		<td>1. delujoči osnutek</td>
+		<td></td>
+		<td>zadnji klic</td>
+		<td>kandidat priporočila</td>
+		<td>priporočilo</td>
+	</tr>
+		<tr>
+		<td>HTML5.2</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>1. delujoč osnutek</td>
+		<td></td>
+	</tr>
+	
+</table>
+
+<br><br><br>
+
+<a name="zgodovina8"></a>
+<h2>Lasnosti in API</h2><br>
+W3C predlaga boljše zanašanje na modularnost kot ključni del plana za hitrejše napredovanje, kar pomeni prepoznavanje določenih lasnostni, ali predlaganih ali pa že obstojočih v specifikaciji, ter ter jih izboljševati kot samostojne specifikacije. Nekatere tehnologije ki so bile originalno definirane v HTML5 so sedaj definirane v posameznih specifikacijah:
+<br><br>
+&mdash; HTML Working Group - HTML Canvas 2D Context<br>
+&mdash; Web Apps WG - Web Messaging, Web Workers, Web Storage, WebSocket API<br>
+&mdash; IETF HyBi WG - WebSocket Protokol<br>
+&mdash; WebRTC WG - WebRTC<br>
+&mdash; W3C Web Media Text Tracks CG - WebVTT<br>
+<br>
+Nekatere specifikacije ki so bile sprva razvite kot samo stoječe so sedaj prilagojene oziroma preoblikovane kot HTML5 dodatki ali funkcije kot so na primer: SVG, MathML, WAI-ARIA.
+<br>
+
+</div>
+	<br />	<hr>
+	
+<br><br>
+<a name="Funkcije"></a>
+<div>
+<h1>Funkcije</h1><br />
+<br />
+
+<a name="funkcija1"></a>
+<h2>Markup</h2><br>
+HTML5 predstavi elemente in atribute ki odražajo običajno uporabno na modernih spletnih straneh. Nekatere so semantične zamenjave za običajne uporabe generičnih blokov (&lt;div&gt;) in (&lt;pan&gt;) elemente, kot na primer &lt;nav&gt; (blok za navigacijo po spletnih straneh), &lt;footer&gt; (običajno označuje dno spletne strani ali zadnje vrstice kode HTML), ali &lt;audio&gt; ter &lt;video&gt; namesto &lt;object&gt;. Nekateri ne uporabljeni oziroma opuščeni elementi iz HTML4.01 so bili odstranjeni, vključno z popolnoma predstavitvenimi elementi kot so &lt;font&gt; in &lt;center&gt;, katerih efekt je že dolgo bil nadomeščen s bolj sposobnim CSS (Cascading Style Sheets). So pa tudi poudarili pomembnost DOM skript (kot so, JavaScript) v brskalnikih.
+<br><br><br>
+
+
+<a name="funkcija2"></a>
+<h2>Novi API</h2><br>
+Zraven novim določitvam markup, HTML5 še določi skriptni programski vmesnik (API), ki se lahko uporabljajo s JavaScript. Že obstoječi vmesnik za model objektnih dokumentov (DOM) se še izpopolni doda funkcije de facto. Dodajo se tudi novi APIji kot so:
+<br><br>
+&mdash; Elementi canvas za takojšno 2D risanje,<br>
+&mdash; Časovni predvajalnik medijev (video, audio)<br>
+&mdash; Offline spletne aplikacije<br>
+&mdash; urejanje dokumentov<br>
+&mdash; Drag-and-drop (povleci in spusti)<br>
+&mdash; med dokumentno sporočanje<br>
+&mdash; urejanje zgodovine brskalnika<br>
+&mdash; MIME type in registriranje rokovanja s protokoli<br>
+&mdash; Microdata<br>
+&mdash; Web Storage, ogrodje za key-value storage, kar je podobno kot cookies toda z večjo kapaciteto in izboljšanim API.<br>
+<br>
+Nekatere tehnologije ki so navedene, niso vključene v W3C HTML5 specifikaciji, čeprav so v WHATWG HTML specifikaciji. Nekatere navezujoče se tehnologije, ki niso del ne W3C HTML5 ali WHATWG HTML specifikacij, so navedene spodaj. W3C zato izdaja specifikacije posamezno za te:
+<br><br>
+&mdash; Geolocation<br>
+&mdash; Web SQL Database, lokalna SQL podatkovna baza (se več ne posodablja)<br>
+&mdash; Indexed Database API, indeksni hierarharični key-value store (predhodnik je WebSimpleDB)<br>
+&mdash; HTML5 File API, rokuje s nalaganjem in manipulacijo datotek<br>
+&mdash; Directories and System, API namenjem zadostovanju client-side-storage uporabi<br>
+&mdash; File Writer, API za pisanje v datoteke s pomočje spletnih aplikacij<br>
+&mdash; Web Audio API, visoko nivojski JavaScript API za procesiranje zvoka na spletu<br>
+&mdash; ClassList API<br>
+<br>
+HTML5 ne ponuja animiranja znotraj spletnih strani. Dodatne JavaScript ali CSS3 funkcije so potrebne za animiranje HTML elementov. Animiranje je tudi mogoče z uporabno JavaScript ter HTML4, ter znotraj SVG elementov z uporabo SMIL, toda podpora za te upada s strani brskalnikov.
+<br><br><br>
+
+
+<a name="funkcija3"></a>
+<h2>XHTML5 (XML-oblikovan HTML5)</h2><br>
+XML dokumenti  se morajo servirati z XML Internet media type (pogosto imenovano “MIME type”) kot so application/xhtml+xml ali application/xml, ter mora potrditi k strogi in lepo oblikovani sintaksi XMLja. XHTML5 je preprosto povedano XML oblika HTML5 podatkov (primer: brez katerih koli zaprtih značk), poslanih z enim od XML medija tipov. HTML je bil napisan  da ustreza obema HTML in XHTML specifikacijama, ter bo posledično proizvedlo iste DOM drevesa ne glede na to ali je uporabljen HTML ali XML, kar se imenuje “polyglot markup”
+<br><br><br>
+
+
+<a name="funkcija4"></a>
+<h2>Reševanje napak</h2><br>
+HTML5 je oblikovan tako da lahko stari brskalniki varno ignorirajo nove konstrukte HTML5. V kontrastu z HTML4.01, HTML5 specifikacija daje podrobna navodila za leksiranje (pretvarjanje krakterjev v skevenco tokenov) in parsing (preučevanje vez simbolov ali z naravnim jezikom ali pa z računalniškim, ter potrjevanje pravil z zadanim pravilnikom), z namenom da bodo različni brskalniki proizvedli isti produkt v primeru ne pravline sintakse. Čeprav HTML5 sedaj definira konstanto obnašanje za “tag soup” dokumente, se ti dokumenti ne obravnavajo za skladne s HTML5 standardi.
+<br><br><br>
+
+
+<a name="funkcija5"></a>
+<h2>Popularnost</h2><br>
+Glede na nekatera poročila objavljna 30. septembra 2011, je 34 od 100 najboljših spletnih straneh uporabljalo HTML5 - temu so sledili iskalniki ter socialna omrežja. Še nekatera poročila izdana augusta 2013 so pokazala da je 153 bogatejših in vrednejših US podjetji implementiralo HTML5 na njihovih poslovnih straneh.
+<br><br><br>
+
+
+<a name="funkcija6"></a>
+<h2>Razlika mad HTML5 ter HTML4.01 in XHTML1.X</h2><br>
+Sledeče je bežen seznam razlik ter nekateri specifični primeri:<br>
+&mdash; Nova parsing pravila: orientirana proti fleksibilnosti prasinga ter kompatibilnosti ter ni zasnovan na SGML<br>
+&mdash; Sposobnost da lahko uporabimo SVG ter MathML v text/html<br>
+&mdash; Novi elementi: article, aside, audio, bdi, canvas, command, data, datalist, details, embed, figcaption, figure, footer, header, keygen, mark, meter, nav, outpu, progress, rp, rt, ruby, section, source, summary, time, track, video, wbr<br>
+&mdash; Novi tipi kontrol: dates and times, email, url, search, number, range, tel, color<br>
+&mdash; Novi atributi: charset (k meta), async (k script)<br>
+&mdash; Globalni atributi (ki jih lahko pripišemo vsem elementom): id, tabindex, hidden, data-*(custom data atribut)<br>
+&mdash; Opuščeni elementi bodo odstranjeni: acronym, applet, basefont, big, center, dir, font, frame, frameset, isindex, noframes, strike, tt<br>
+
+
+</div>
+	<br />	<hr>
+
+	<br><br>
+<a name="Logo"></a>
+<div>
+<h1>Logo</h1><br />
+<br />
+
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" align="left" height="128px"></img>
+18. januarja leta 2011, je W3C naznanilo logo ki je predstavljal interes za HTML5. Za razliko od ostalih logov ki jih je izdal W3C, ta ne predstavlja oziroma zastopa veljavnost ali skladnost s določenimi standardi. Od 1. aprila 2011 je ta logo uraden logo HTML5.
+<br><br>
+Ko je W3C prvič javno predstavljalo logo so ga predstavili kot “generalni vse namenski identifikator mza širši set odprtih spletnih tehnologij, vključno z HTML5, CSS, SVG, VOFF, ter drugimi”. Nekateri spletni zagovorniki standarda, tudi The Web Standards Project, kritizirajo da definicija HTML5 kot dežnikasti pojem (torej zajemanje večih stvari), ter izpostavljanje zamedljenosti terminologije in možna zamenjava oziroma miscommunication. Tri dneve pozneje, je W3C odgovorilo odzivu skupnosti ter spremenil definicijo logota, W3C je rekel da logo predstavlja HTML5 ter temelj za moderne spletne aplikacije.Rada se bi zahvalila mentorju, ki je bil zelo spodbuden. Rada se mu bi tudi zahvalila za vse nasvete, ki jih je dal, saj brez njih verjetno ne bi uspela dokončati ter narediti naloge.
+
+</div>
+	<br />	<hr>
+	
+	<br><br>
+<a name="DRM"></a>
+<div>
+<h1>Urejanje digitalnih pravic (DRM)</h1><br />
+<br />
+
+Industrijski igralci kot so BBC, Google, Microsoft ter Netflix so spodbujali vključitev modulov za kriptiranje medijev, oblika upravljanja digitalnih pravic (DRM), v HTML5 standarde. Od konca leta 2012 ter na začetku 2013, je 27 organizacij vključno z Free Software Foundation začelo kampanijo proti vključitvi DRMja v standarde. Čeprav je proti koncu septembra 2013, W3C HTML Working Group se odločil da bo EME, ena izmed oblik DRM, vključena oziroma je v planu izdelave za HTML5.1 standard. WHATWH je “HTML Living Standard” je nadaljeval razvoj brez DRM omogočenih predlogov. Manu Sporny, član W3Cja je rekel da EME ne bo rešil problema, ki bi ga naj obravnaval. Nasprotniki izpostavljajo da je že EME sam zase arhitektura za DRM plug-in mehanizme.
+<br><br>
+Prvotni podporniki DRMja v HTML5 so Google ter Microsoft, med njimi pa je bil tudi Adobe. 14. maja 2014, je Mozila naznanila da ima plan dodati podporo za EME v brskalniku Firefox, zadnji bolj poznani brskalnik ki se je izogibal DRM. Ta korak so oznčili z besedami teški ter neprijeten, Andreas Gal od Mozille je obrazlagal da v prihodnjih verzijah bo Firefox ostal odprto koden toda bo prišel s dezajnom peskovnika tako da bo omogočal Adobov modulj za dekripcijo. Čeprav je Mitchell Baker obljubljal da bodo delali na alternativi, je tudi dejal da z Mozilino zavrnitev za implementacijo EME bi samo dosegli, da bi veliko uporabnikov zamenjalo brskalnik. To odločitev so Cory Doctorow ter Free Software Foundation zelo obsodili.
+
+</div>
+	<br />	<hr>
+	
+	<br><br>
+<a name="HTML-elementi"></a>
+<div>
+<h1>HTML elementi</h1><br />
+<br />
+
+<a name="HTMLe1"></a>
+<h2>Elementi dokumetov in meta podatkov</h2><br>
+<table border="1" style="width:100%">
+	<tr>
+		<th>Element</th>
+		<th>Opis</th>
+		<th>Tip</th>
+		<th>Novo/Spremenjeno</th>
+	</tr>
+	
+	<tr>
+		<td>base</td>
+		<td>postavi osnovo za relativne URLje</td>
+		<td>metapodatki</td>
+		<td>ohranjeno</td>
+	</tr>
+	
+	<tr>
+		<td>body</td>
+		<td>označuje vsebino HTML</td>
+		<td>ni podan</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>DOCTYPE</td>
+		<td>označuje začetek HTML dokumenta</td>
+		<td>ni podan</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>head</td>
+		<td>vsebuje meta podatke dokumenta</td>
+		<td>ni podan</td>
+		<td>ohranjeno</td>
+	</tr>
+	
+	<tr>
+		<td>html</td>
+		<td>navede začetek HTMLja v dokumentu</td>
+		<td>ni podan</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>link</td>
+		<td>definira zarmerje z zunanjim virom</td>
+		<td>metapodatki</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>meta</td>
+		<td>poda informacije o dokumentu</td>
+		<td>metapodatki</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>noscript</td>
+		<td>vsebuje vsebino, ki se bo prikazala, ko skriptiranje v brskalniku ni na voljo</td>
+		<td>metapodatki/fraziranje</td>
+		<td>ohranjeno</td>
+	</tr>
+	
+	<tr>
+		<td>script</td>
+		<td>definira skript blok</td>
+		<td>metapodatki/fraziranje</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>style</td>
+		<td>definira CSS stil</td>
+		<td>metapodatki</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>title</td>
+		<td>nastavi naslov dokumenta</td>
+		<td>metapodatki</td>
+		<td>ohranjeno</td>
+	</tr>
+
+</table>
+ <br><br>
+<a name="HTMLe2"></a>
+<h2>Tekstovni elementi</h2> <!-- 28 jih je !--><br>
+<table border="1" style="width:100%">
+
+	<tr>
+		<th>Element</th>
+		<th>Opis</th>
+		<th>Tip</th>
+		<th>Novo/Spremenjeno</th>
+	</tr>
+	
+	<tr>
+		<td>a</td>
+		<td>ustvari hiperpovezavo</td>
+		<td>fraziranje/pretok</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>abbr</td>
+		<td>naznani okrajšavo</td>
+		<td>fraziranje</td>
+		<td>ohranjeno</td>
+	</tr>
+	
+	<tr>
+		<td>b</td>
+		<td>zamakne del teksta brez dodatnega poudarka</td>
+		<td>fraziranje</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>br</td>
+		<td>naznani lom vrstice</td>
+		<td>fraziranje</td>
+		<td>ohranjeno</td>
+	</tr>
+	
+	<tr>
+		<td>cite</td>
+		<td>naznani naslov novega dela</td>
+		<td>fraziranje</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>code</td>
+		<td>naznani fragment kode</td>
+		<td>fraziranje</td>
+		<td>ohranjeno</td>
+	</tr>
+	
+	<tr>
+		<td>del</td>
+		<td>naznani tekst, odstranjen iz dokumenta</td>
+		<td>fraziranje/pretok</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>dfn</td>
+		<td>naznani definicijo izraza</td>
+		<td>fraziranje</td>
+		<td>ohranjeno</td>
+	</tr>
+	
+	<tr>
+		<td>em</td>
+		<td>naznani razpon teksta s poudarjenim pritiskom</td>
+		<td>fraziranje</td>
+		<td>ohranjeno</td>
+	</tr>
+	
+	<tr>
+		<td>i</td>
+		<td>naznani razpon teksta, drugačen od ostale vsebine, kot tuja beseda</td>
+		<td>fraziranje</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>ins</td>
+		<td>naznani, da je tekst dodan v dokument</td>
+		<td>fraziranje/pretok</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>kbd</td>
+		<td>naznani uporabniški vnos</td>
+		<td>fraziranje</td>
+		<td>ohranjeno</td>
+	</tr>
+	
+	<tr>
+		<td>mark</td>
+		<td>naznani vsebino poudarjeno zaradi pomembnosti v drugem kontekstu</td>
+		<td>fraziranje</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>q</td>
+		<td>naznani vsebino citirano iz drugega vira</td>
+		<td>fraziranje</td>
+		<td>ohranjeno</td>
+	</tr>
+	
+	<tr>
+		<td>rp</td>
+		<td>naznani parametre za uporabo elementa ruby</td>
+		<td>fraziranje</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>rt</td>
+		<td>naznani notacijo za uporabo elementa ruby</td>
+		<td>fraziranje</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>ruby</td>
+		<td>naznani notacijo postavljeno nad ali ob znaki v logografičnem jeziku</td>
+		<td>fraziranje</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>s</td>
+		<td>naznani tekst, ki ni več aktualen</td>
+		<td>fraziranje</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>samp</td>
+		<td>naznani izhodišče za računalniški program</td>
+		<td>fraziranje</td>
+		<td>ohranjano</td>
+	</tr>
+	
+	<tr>
+		<td>small</td>
+		<td>naznani drobni tisk</td>
+		<td>fraziranje</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>span</td>
+		<td>generični element brez lastnega semantičnega pomena, za dodajanje globalnih atributov brez dodane vrednosti</td>
+		<td>fraziranje</td>
+		<td>ohranjeno</td>
+	</tr>
+	
+	<tr>
+		<td>strong</td>
+		<td>naznani pomemben tekst</td>
+		<td>fraziranje</td>
+		<td>ohranjeno</td>
+	</tr>
+	
+	<tr>
+		<td>sub</td>
+		<td>naznani pripis teksta</td>
+		<td>fraziranje</td>
+		<td>ohranjeno</td>
+	</tr>
+	
+	<tr>
+		<td>sup</td>
+		<td>naznani nadpis teksta</td>
+		<td>fraziranje</td>
+		<td>ohranjeno</td>
+	</tr>
+	
+	<tr>
+		<td>time</td>
+		<td>naznani čas ali datum</td>
+		<td>fraziranje</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>u</td>
+		<td>zamakne razpon teksta brez dodatnega poudarka</td>
+		<td>fraziranje</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>var</td>
+		<td>naznani spremenljivko iz programa</td>
+		<td>fraziranje</td>
+		<td>ohranjeno</td>
+	</tr>
+	
+	<tr>
+		<td>wbr</td>
+		<td>naznani prostor kjer se lahko varno postavi lom vrstice</td>
+		<td>fraziranje</td>
+		<td>novo</td>
+	</tr>
+
+</table>
+<br><br>
+<a name="HTMLe3"></a>
+<h2>Elementi za združitev</h2> <!-- 28 jih je !--><br>
+<table border="1" style="width:100%">
+
+	<tr>
+		<th>Element</th>
+		<th>Opis</th>
+		<th>Tip</th>
+		<th>Novo/Spremenjeno</th>
+	</tr>
+	
+	<tr>
+		<td>blackquote</td>
+		<td>naznani blok vsebine citiran z drugega vira</td>
+		<td>pretok</td>
+		<td>ohranjeno</td>
+	</tr>
+	
+	<tr>
+		<td>dd</td>
+		<td>naznani definicijo znotraj dl elementa</td>
+		<td>ni podan</td>
+		<td>ohranjeno</td>
+	</tr>
+	
+	<tr>
+		<td>div</td>
+		<td>generični element brez dodatne pomembnosti</td>
+		<td>pretok</td>
+		<td>ohranjeno</td>
+	</tr>
+	
+	<tr>
+		<td>dl</td>
+		<td>naznani opisno listo, ki vsebuje zahteve in definicije</td>
+		<td>pretok</td>
+		<td>ohranjeno</td>
+	</tr>
+	
+	<tr>
+		<td>dt</td>
+		<td>naznani zahtevo znotraj dl elementa</td>
+		<td>ni podan</td>
+		<td>ohranjeno</td>
+	</tr>
+	
+	<tr>
+		<td>figcaption</td>
+		<td>naznani napis za figure element</td>
+		<td>ni podan</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>figure</td>
+		<td>naznani figuro</td>
+		<td>pretok</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>hr</td>
+		<td>naznani lom odstavka</td>
+		<td>pretok</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>li</td>
+		<td>naznani predmet v ul, ol ali menu elementu</td>
+		<td>ni podan</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>ol</td>
+		<td>naznani urejen seznam</td>
+		<td>pretok</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>p</td>
+		<td>naznani odstavek</td>
+		<td>pretok</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>pre</td>
+		<td>naznani vsebino čigar oblikovanje naj se ohrani</td>
+		<td>pretok</td>
+		<td>ohranjeno</td>
+	</tr>
+	
+	<tr>
+		<td>ul</td>
+		<td>naznani neurejen seznam</td>
+		<td>pretok</td>
+		<td>spremenjeno</td>
+	</tr>
+
+</table>
+<br><br>
+<a name="HTMLe4"></a>
+<h2>Elementi za delitev</h2> <!-- 28 jih je !--><br>
+<table border="1" style="width:100%">
+
+	<tr>
+		<th>Element</th>
+		<th>Opis</th>
+		<th>Tip</th>
+		<th>Novo/Spremenjeno</th>
+	</tr>
+	
+	<tr>
+		<td>address</td>
+		<td>naznani kontaktno informacijo za dokument</td>
+		<td>pretok</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>article</td>
+		<td>naznani samostojen blok z vsebino</td>
+		<td>pretok</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>aside</td>
+		<td>naznani vsebino bežno povezano s ostalo</td>
+		<td>pretok</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>details</td>
+		<td>ustvari sekcijo, ki jo uporabnik lahko razširi za dodatne informacije</td>
+		<td>pretok</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>footer</td>
+		<td>naznani nogo dokumenta</td>
+		<td>pretok</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>h1-h6</td>
+		<td>naznani razdelek</td>
+		<td>pretok</td>
+		<td>ohranjeno</td>
+	</tr>
+	
+	<tr>
+		<td>header</td>
+		<td>naznani glavo dokumenta</td>
+		<td>pretok</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>hgroup</td>
+		<td>skrije vse razen prvo zbirko razdelkov</td>
+		<td>pretok</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>nav</td>
+		<td>naznani pomembno sbirko navigacijskih elementov</td>
+		<td>pretok</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>section</td>
+		<td>naznani pomemben koncept</td>
+		<td>pretok</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>summary</td>
+		<td>naznani naslov ali opis za vsebino v details elementu</td>
+		<td>ni podan</td>
+		<td>novo</td>
+	</tr>
+
+</table>
+<br><br>
+<a name="HTMLe5"></a>
+<h2>Elementi za ustvarjanje tabel</h2> <!-- 28 jih je !--><br>
+<table border="1" style="width:100%">
+
+	<tr>
+		<th>Element</th>
+		<th>Opis</th>
+		<th>Tip</th>
+		<th>Novo/Spremenjeno</th>
+	</tr>
+	
+	<tr>
+		<td>caption</td>
+		<td>doda napis tabeli</td>
+		<td>ni podan</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>col</td>
+		<td>naznani posamezni stolpec</td>
+		<td>ni podan</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>colgroup</td>
+		<td>naznani skupino stolpcev</td>
+		<td>ni podan</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>table</td>
+		<td>naznani tabelo</td>
+		<td>flow</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>tbody</td>
+		<td>naznani telo tabele</td>
+		<td>ni podan</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>td</td>
+		<td>naznani invidualno celiko tabele</td>
+		<td>ni podan</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>tfoot</td>
+		<td>naznani nogo tabele</td>
+		<td>ni podan</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>th</td>
+		<td>naznani invidualni razdelek celice</td>
+		<td>ni podan</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>thead</td>
+		<td>naznani glavo tabele</td>
+		<td>ni podan</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>tr</td>
+		<td>naznani novo vrsto celic</td>
+		<td>ni podan</td>
+		<td>spremenjeno</td>
+	</tr>
+</table>
+<br><br>
+<a name="HTMLe6"></a>
+<h2>Elementi za ustvarjanje obrazcev</h2> <!-- 28 jih je !--><br>
+<table border="1" style="width:100%">
+
+	<tr>
+		<th>Element</th>
+		<th>Opis</th>
+		<th>Tip</th>
+		<th>Novo/Spremenjeno</th>
+	</tr>
+	
+	<tr>
+		<td>button</td>
+		<td>naznani gumb, ki bo predložil ali ponastavil obrazec</td>
+		<td>fraziranje</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>datalist</td>
+		<td>definira skupek predloženih vrednosti za uporabnika</td>
+		<td>pretok</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>fieldset</td>
+		<td>naznani skupino elementov za obrazec</td>
+		<td>pretok</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>form</td>
+		<td>naznani HTML obrazec</td>
+		<td>pretok</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>input</td>
+		<td>naznani kontrolo za zbiranje podatkov od uporabnika</td>
+		<td>fraziranje</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>keygen</td>
+		<td>generira javni/privatni ključ</td>
+		<td>fraziranje</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>label</td>
+		<td>naznani oznako za element obrazca</td>
+		<td>fraziranje</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>legend</td>
+		<td>naznani opisno ozanko za fieldset element</td>
+		<td>ni podan</td>
+		<td>ohranjeno</td>
+	</tr>
+	
+	<tr>
+		<td>optgroup</td>
+		<td>naznani skupino povezanih option elementov</td>
+		<td>ni podan</td>
+		<td>ohranjeno</td>
+	</tr>
+	
+	<tr>
+		<td>option</td>
+		<td>naznani možnost, ki bo predstavljena uporabniku</td>
+		<td>ni podan</td>
+		<td>ohranjeno</td>
+	</tr>
+	
+	<tr>
+		<td>output</td>
+		<td>naznani rezultat izračuna</td>
+		<td>fraziranje</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>select</td>
+		<td>predstavi uporabniku izbrano zbirko možnosti</td>
+		<td>fraziranje</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>textarea</td>
+		<td>dovoli uporabniku vnos več vrstic teksta</td>
+		<td>fraziranje</td>
+		<td>spremenjeno</td>
+	</tr>
+</table>
+<br><br>
+<a name="HTMLe7"></a>
+<h2>Elementi za vključitev vsebine</h2> <!-- 28 jih je !--><br>
+<table border="1" style="width:100%">
+	<tr>
+		<th>Element</th>
+		<th>Opis</th>
+		<th>Tip</th>
+		<th>Novo/Spremenjeno</th>
+	</tr>
+	
+	<tr>
+		<td>area</td>
+		<td>naznani površino razčlenjene slike za stranko</td>
+		<td>fraziranje</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>audio</td>
+		<td>naznani audio vir</td>
+		<td>ni podan</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>canvas</td>
+		<td>poda dinamično grafično platno</td>
+		<td>fraziranje/pretok</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>embed</td>
+		<td>vključi vsebino v HTML dokumetnu z uporabo vtičnikov</td>
+		<td>fraziranje</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>iframne</td>
+		<td>vključi en dokument v drugega tako, da ustvari kontekst za brskanje</td>
+		<td>fraziranje</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>img</td>
+		<td>vključi sliko</td>
+		<td>fraziranje</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>map</td>
+		<td>naznani definicijo razčlenjene slike za stranko</td>
+		<td>fraziranje/pretok</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>meter</td>
+		<td>vključi predstavitev številčne vrednosti znotraj meja možnosti vrednosti</td>
+		<td>fraziranje</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>object</td>
+		<td>vključi vsebino v HTML dokument in se lahko uporabi za ustvarjanje konteksta za brskanje</td>
+		<td>fraziranje/pretok</td>
+		<td>spremenjeno</td>
+	</tr>
+	
+	<tr>
+		<td>param</td>
+		<td>naznani parameter, ko bo podan vtičniku skozi element object</td>
+		<td>ni podan</td>
+		<td>ohranjeno</td>
+	</tr>
+	
+	<tr>
+		<td>progress</td>
+		<td>vključi predstavitev poteka proti cilju ali zaključku naloge</td>
+		<td>fraziranje</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>source</td>
+		<td>naznani medijski vir</td>
+		<td>ni podan</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>svg</td>
+		<td>naznani strukturirano vektorko vsebino</td>
+		<td>ni podan</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>track</td>
+		<td>naznani dopolnilni medijski tir npr. podnapise</td>
+		<td>ni podan</td>
+		<td>novo</td>
+	</tr>
+	
+	<tr>
+		<td>video</td>
+		<td>naznani video vir</td>
+		<td>ni podan</td>
+		<td>novo</td>
+	</tr>
+</table>
+</div>
+	<br />	<hr>
+		<br><br>
+		
+<a name="Opisi"></a>
+<div>
+<h1>Opisi posameznih značk</h1><br />
+<br />
+
+<a name="opis1"></a>
+<h2>Značke za dokumente in meta podatke</h2><br>
+
+<img align="right" src="4predmet-slike\1.png"></img>
+<pre>
+&lt;base&gt;
+Primer:
+&lt;head&gt;
+&lt;base href=&quot;http://www.sers.si/slike/&quot; target=&quot;_blank&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;img src=&quot;logo.png&quot; width=&quot;24&quot; height=&quot;39&quot; alt=&quot;Logo&quot;&gt;
+&lt;/body&gt;
+
+Značka &lt;base&gt; definira osnovni URL oz. cilj za vse relativne URL-je v dokumentu. 
+V dokumentu je lahko maksimalno en &lt;base&gt; element in mora biti znotraj elementa &lt;head&gt;.
+</pre><hr>
+<img align="right" src="4predmet-slike\2.png"></img>
+<pre>
+
+&lt;body&gt;
+Primer:
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Naslov dokumenta&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+Vsebina dokumetna
+&lt;/body&gt;
+
+&lt;/html&gt;
+
+Značka &lt;body&gt; določi telo dokumenta. Vsebuje vse dele HTML dokumenta, kot so tekst, hiperpovezave, slike, tabele, sezname itd. 
+HTML5 določenih atributov več ne podpira (predvsem oblikovni - npr. določanje barve).
+</pre><hr>
+<img align="right" src="4predmet-slike\3.png"></img>
+<pre>
+
+&lt;DOCTYPE&gt;
+Primer:
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Naslov dokumenta&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+Besedilo dokumenta
+&lt;/body&gt;
+&lt;/html&gt;
+
+Deklaracija &lt;!DOCTYPE&gt; mora biti prva stvar v HTML dokumentu, pred značko &lt;html&gt;. 
+Ni HTML značka, ampak navodilo spletnemu brskalniku o verziji pisanega HTML-ja. HTML5 je to deklaracijo zelo poenostavil.
+</pre><hr>
+<img align="right" src="4predmet-slike\4.png"></img>
+<pre>
+
+&lt;head&gt;
+Primer:
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Naslov dokumenta&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+Vsebina dokumenta
+&lt;/body&gt;
+
+&lt;/html&gt;
+
+V znački &lt;head&gt; lahko določimo vse elemente glave. Lahko vsebuje naslov dokumenta, skripte, stile, meta podatke in še več. 
+V HTML5 &lt;head&gt; ni več potrebno zapisati.
+</pre><hr>
+<img align="right" src="4predmet-slike\5.png"></img>
+<pre>
+
+&lt;link&gt;
+Primer:
+&lt;head&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;theme.css&quot;&gt;
+&lt;/head&gt;
+
+Značka &lt;link&gt; definira povezavo med dokumentom in zunanjim virom, uporablja se kot povezava za zunanje sloge. 
+HTML5 nekaterih atributov več ne podpira, dodan je nov atribut za definiranje velikosti.
+</pre><hr>
+<img align="right" src="4predmet-slike\6.png"></img>
+<pre>
+
+&lt;meta&gt;
+Primer:
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;opis&quot; content=&quot;spletni učbenik&quot;&gt;
+&lt;meta name=&quot;avtor&quot; content=&quot;Ime Priimek&quot;&gt;
+&lt;/head&gt;
+
+Meta podatki so informacije o vsebini. Te podatke poda značka &lt;meta&gt;, ti podatki ne bodo prikazani na zaslonu. 
+Navadno se uporabljajo za opis strani, ključne besede, avtorja dokumenta, itd. 
+Te podatke uporabljajo brskalniki, iskalniki in ostale spletne storitve. HTML5 ima nov atribut s katerim je lažje določiti nabor znakov.
+</pre><hr>
+<img align="right" src="4predmet-slike\7.png"></img>
+<pre>
+
+&lt;noscript&gt;
+Primer:
+&lt;script&gt;
+document.write(&quot;Dobrodošli!&quot;)
+&lt;/script&gt;
+&lt;noscript&gt;Vaš brskalnik ne podpira JavaScript!&lt;/noscript&gt;
+
+Značka &lt;noscript&gt; definira alternativno vsebino za uporabnike, ki imajo v brskalniku izključene skripte ali jih ne podpira. 
+Lahko se uporabi v glavi in telesu. Vsebina se bo prikazala, če skripte v brskalniku ni. HTML5 je omogočil uporabil značke ne samo v telesu, temveč tudi v glavi.
+</pre><hr>
+<img align="right" src="4predmet-slike\8.png"></img>
+<pre>
+
+&lt;script&gt;
+Primer:
+&lt;script&gt;
+document.getElementById(&quot;demo&quot;).innerHTML = &quot;Dobrodošli!&quot;;
+&lt;/script&gt;
+
+Značka &lt;script&gt; se uporablja za definiranje skripte s strani uporabnika, kot npr. JavaScript. 
+Elementi te značke vsebujejo skriptne stavke ali kažejo na zunanjo skriptno datoteko. Pri HTML5 atribut za tip ni več potreben in ima dodan nov async atribut.
+</pre><hr>
+<img align="right" src="4predmet-slike\9.png"></img>
+<pre>
+
+&lt;style&gt;
+Primer:
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+		h1 {color:red;}
+		p {color:blue;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;h1&gt;A heading&lt;/h1&gt;
+	&lt;p&gt;A paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+Značka &lt;style&gt; se uporablja za določanje informacij o slogu v HTML dokmentu. 
+Znotraj elementa je določeno kako naj bodo HTML elementi predstavljeni v brskalniku. 
+Vsak dokument lahko vsebuje več značk. HTML5 ima dodan nov atribut za natančno določanje posameznih delov v dokumentu.
+</pre><hr>
+<img align="right" src="4predmet-slike\10.png"></img>
+<pre>
+
+&lt;title&gt;
+
+Primer:
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;Naslov&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	Vsebina dokumenta
+&lt;/body&gt;
+&lt;/html&gt;
+
+Značka &lt;title&gt; je potrebna v vseh HTML dokumentih in definira naslov dokumenta. 
+Element določi ime v orodni vrstici brskalnika, naslov strani, ko je podana med priljubljene in prikaže naslov strani v iskalnikih.
+</pre><hr>
+<br><br>
+
+<a name="opis2"></a>
+<h2>Značke za urejanje besedila</h2><br>
+<img align="right" src="4predmet-slike\11.png"></img>
+<pre>
+&lt;a&gt;
+Primer:
+&lt;a href=&quot;http://www.sers.si&quot;&gt;Obiščite stran SERS&lt;/a&gt;
+
+Značka &lt;a&gt; definira hiperpovezavo, ki se uporablja za povezavo iz ene strani na drugo. 
+Najpomembnejši atribut elementa je href, ki označuje cilj povezave.
+</pre><hr>
+<img align="right" src="4predmet-slike\12.png"></img>
+<pre>
+
+&lt;abbr&gt;
+Primer:
+&lt;abbr title=&quot;Srednja elektro-računalniška šola Maribor&quot;&gt;SERS&lt;/abbr&gt;se nahaja v Mariboru.
+
+Značka &lt;abbr&gt; označuje kratico besede (kot je prikazano v zgornjem primeru). 
+Označevanje kratic lahko poda koristne informacije za brskalnike in iskalnike.
+</pre><hr>
+<img align="right" src="4predmet-slike\13.png"></img>
+<pre>
+
+&lt;b&gt;
+Primer:
+&lt;p&gt;To je navaden tekst - &lt;b&gt;ta pa v krepkem tisku&lt;/b&gt;.&lt;/p&gt;
+
+Značka &lt;b&gt; označuje besedilo v krepkem tisku.
+</pre><hr>
+<img align="right" src="4predmet-slike\14.png"></img>
+<pre>
+
+&lt;br&gt;
+Primer:
+Ta tekst vsebuje &lt;br&gt; lom vrstice.
+
+Značka &lt;br&gt; vstavi lom vrstice. Značka je prazna kar pomeni, da nima zaključne značke.
+</pre><hr>
+<img align="right" src="4predmet-slike\15.png"></img>
+<pre>
+
+&lt;cite&gt;
+Primer:
+&lt;p&gt;&lt;cite&gt;Krik&lt;/cite&gt;, ki ga je narisal Edward Munch.&lt;/p&gt;
+
+Značka &lt;cite&gt; definira naslov dela (npr. knjige, slike…). 
+V HTML5 značka ne definira več citatov, temveč naslove del.
+</pre><hr>
+<img align="right" src="4predmet-slike\16.png"></img>
+<pre>
+
+&lt;code&gt;
+Primer:
+&lt;code&gt;Del računalniške kode&lt;/code&gt;
+
+Značka &lt;code&gt; je frazna, označi del računalniške kode.
+</pre><hr>
+<img align="right" src="4predmet-slike\17.png"></img>
+<pre>
+
+&lt;del&gt;
+Primer:
+&lt;p&gt;Moja najljubša barva je &lt;del&gt;modra&lt;/del&gt; &lt;ins&gt;bela&lt;/ins&gt;!&lt;/p&gt;
+Značka &lt;del&gt; označi tekst, ki je bil izbrisan iz dokumenta.
+</pre><hr>
+<img align="right" src="4predmet-slike\18.png"></img>
+<pre>
+
+&lt;dfn&gt;
+Primer:
+&lt;p&gt;&lt;dfn&gt;HTML&lt;/dfn&gt;je standardni označevalni jezik za pisanje spletnih strani.&lt;/p&gt;
+
+Značka &lt;dfn&gt; predstavlja opredelitveni primer izraza v HTML. 
+Ponavadi je prva uporaba izraza v dokumentu. 
+Vsebovati mora tudi definicijo ali razlago izraza znotraj značke.
+</pre><hr>
+<img align="right" src="4predmet-slike\19.png"></img>
+<pre>
+
+&lt;em&gt;
+Primer:
+&lt;em&gt;Poudarjen tekst&lt;/em&gt;
+
+Značka &lt;em&gt; je frazna in označuje poudarjeni tekst.
+</pre><hr>
+<img align="right" src="4predmet-slike\20.png"></img>
+<pre>
+
+&lt;i&gt;
+Primer:
+&lt;p&gt;Avto je poimenoval &lt;i&gt;Strela&lt;/i&gt;, ker je zelo hiter.&lt;/p&gt;
+
+Značka &lt;i&gt; označi del teksta v drugačni obliki. 
+Navadno se pojavi v ležeči obliki in nakaže besedo v tujem jeziku, misel, itd. 
+Uporabila naj bi se, ko ni drugega bolj primernega semantičnega elementa. 
+V HTML5 značka tekst ne označi zgolj v ležeči obliki.
+</pre><hr>
+<img align="right" src="4predmet-slike\21.png"></img>
+<pre>
+
+&lt;ins&gt;
+Primer:
+&lt;p&gt;Moja najljubša barva je &lt;del&gt;modra&lt;/del&gt; &lt;ins&gt;bela&lt;/ins&gt;!&lt;/p&gt;
+
+Značka &lt;ins&gt; označi tekst, ki je bil vstavljen v dokument, navadno prečrta izbrisan tekst in podčrta vstavljen tekst.
+</pre><hr>
+<img align="right" src="4predmet-slike\22.png"></img>
+<pre>
+
+&lt;kbd&gt;
+Primer:
+&lt;kbd&gt;Vnos tipkovnice&lt;/kbd&gt;
+
+Značka &lt;kbd&gt; je frazna in definira vnos tipkovnice.
+</pre><hr>
+<img align="right" src="4predmet-slike\23.png"></img>
+<pre>
+
+&lt;mark&gt;
+Primer:
+&lt;p&gt;Ne pozabi kupiti &lt;mark&gt;mleka.&lt;/mark&gt;&lt;/p&gt;
+
+Značka &lt;mark&gt; označi markiran tekst. Uporabi se, ko želimo osvetliti del teksta. Je nova značka v HTML5.
+</pre><hr>
+<img align="right" src="4predmet-slike\24.png"></img>
+<pre>
+
+&lt;q&gt;
+Primer:
+&lt;p&gt;Njihov cilj je: &lt;q&gt;Ustvariti lepo prihodnost.&lt;/q&gt; Upamo, da jih bo uspelo.&lt;/p&gt;
+
+Značka &lt;q&gt; se uporabi da označbo kratkega citata, brskalniki navadno vstavijo narekovaje okoli besedila.
+</pre><hr>
+<img align="right" src="4predmet-slike\25.png"></img>
+<pre>
+
+&lt;rp&gt;
+Primer:
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;ruby&gt;
+漢 &lt;rt&gt;&lt;rp&gt;(&lt;/rp&gt;ㄏㄢˋ&lt;rp&gt;)&lt;/rp&gt;&lt;/rt&gt;
+&lt;/ruby&gt;
+
+Značka &lt;rp&gt; definira kaj se naj pokaže, če brskalnik ne podpira opombe elementa &lt;ruby&gt;. Je nova značka v HTML5.
+</pre><hr>
+<img align="right" src="4predmet-slike\26.png"></img>
+<pre>
+
+&lt;rt&gt;
+Primer:
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;ruby&gt;
+漢 &lt;rt&gt; ㄏㄢˋ &lt;/rt&gt;
+&lt;/ruby&gt;
+
+Značka &lt;rt&gt; definira razlago ali izgovorjavo znakov (za azijsko tipografijo) v opombi elemnta &lt;ruby&gt;. 
+Uporablja se skupaj z &lt;rp&gt; in &lt;ruby&gt; in je nova v HTML5.
+</pre><hr>
+<img align="right" src="4predmet-slike\27.png"></img>
+<pre>
+
+&lt;ruby&gt;
+Primer:
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;ruby&gt;
+漢 &lt;rt&gt; ㄏㄢˋ &lt;/rt&gt;
+&lt;/ruby&gt;
+
+Značka &lt;ruby&gt; se uporablja za opombe, ki se uporabljajo v Azijski tipografiji, da pokažejo izgovorjavo teh znakov. Značka je nova v HTML5.
+</pre><hr>
+<img align="right" src="4predmet-slike\28.png"></img>
+<pre>
+
+&lt;s&gt;
+Primer:
+&lt;p&gt;&lt;s&gt;Moj novi avto je moder.&lt;/s&gt;&lt;/p&gt;
+&lt;p&gt;Moj novi avto je siv.&lt;/p&gt;
+Značka &lt;s&gt; se uporabi za označitev teksta, ki ni več pravilen, natančen ali aktualen, ne uporablja se v namene brisanega teksta. 
+V HTML5 nima več vloge značke &lt;del&gt;.
+</pre><hr>
+<img align="right" src="4predmet-slike\29.png"></img>
+<pre>
+
+&lt;samp&gt;
+Primer:
+&lt;samp&gt;Sample output from a computer program&lt;/samp&gt;
+
+Značka &lt;samp&gt; je frazna in definira izhodišče računalniškega programa.
+</pre><hr>
+<img align="right" src="4predmet-slike\30.png"></img>
+<pre>
+
+&lt;small&gt;
+Primer:
+&lt;p&gt;sers.si - stran naše šole.&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;Srednja elektro-računalniška šola Maribor&lt;/small&gt;&lt;/p&gt;
+
+Značka &lt;small&gt; označi manjši tekst (in ostale stranske komentarje).
+</pre><hr>
+<img align="right" src="4predmet-slike\31.png"></img>
+<pre>
+
+&lt;span&gt;
+Primer:
+&lt;p&gt;Moj oče ima &lt;span style=&quot;color:blue&quot;&gt;modre&lt;/span&gt; oči.&lt;/p&gt;
+
+Značka &lt;span&gt; se uporabi za združenje vrstičnih elementov v dokument in sama po sebi nima vidnih sprememb.
+</pre><hr>
+<img align="right" src="4predmet-slike\32.png"></img>
+<pre>
+
+&lt;strong&gt;
+Primer:
+&lt;strong&gt;Močen tekst&lt;/strong&gt;
+
+Značka &lt;strong&gt; je frazna in definira pomembno besedilo.
+</pre><hr>
+<img align="right" src="4predmet-slike\33.png"></img>
+<pre>
+
+&lt;sub&gt;
+Primer:
+&lt;p&gt;To besedilo vsebuje &lt;sub&gt;podpisano&lt;/sub&gt; besedilo.&lt;/p&gt;
+
+Značka &lt;sub&gt; označi podpisano besedilo. Pojavi se polovico znaka pod normalno mejo in je včasih v manjši pisavi. 
+Uporablja se lahko za kemijske formule.
+</pre><hr>
+<img align="right" src="4predmet-slike\34.png"></img>
+<pre>
+
+&lt;sup&gt;
+Primer:
+&lt;p&gt;To besedilo vsebuje &lt;sup&gt;nadpisano&lt;/sup&gt; besedilo.&lt;/p&gt;
+
+Značka &lt;sup&gt; označi nadpisano besedilo. Pojavi se polovico znaka nad normalno mejo in je včasih v manjši pisavi. 
+Uporablja se lahko za opombe.
+</pre><hr>
+<img align="right" src="4predmet-slike\35.png"></img>
+<pre>
+
+&lt;time&gt;
+Primer:
+&lt;p&gt;Začne se ob &lt;time&gt;10:00&lt;/time&gt; vsako jutro.&lt;/p&gt;
+
+&lt;p&gt;&lt;time datetime=&quot;2008-02-14 20:00&quot;&gt;nimam časa&lt;/time&gt;.&lt;/p&gt;
+
+Značka &lt;time&gt; definira datum in čas, je nova v HTML5.
+</pre><hr>
+<img align="right" src="4predmet-slike\36.png"></img>
+<pre>
+
+&lt;u&gt;
+Primer:
+&lt;p&gt;To je &lt;u&gt;odvastek&lt;/u&gt;.&lt;/p&gt;
+
+Značka &lt;u&gt; predstavlja besedilo, ki mora biti drugačno od navadnega, kot napačno črkovana beseda.
+</pre><hr>
+<img align="right" src="4predmet-slike\37.png"></img>
+<pre>
+
+&lt;var&gt;
+Primer:
+&lt;var&gt;Spremenljivka&lt;/var&gt;
+
+Značka &lt;var&gt; je frazna in definira spremenljivko.
+</pre><hr>
+<img align="right" src="4predmet-slike\38.png"></img>
+<pre>
+
+&lt;wbr&gt;
+Primer:
+&lt;p&gt;Da razumeš AJAX se moraš spoznati na&lt;wbr&gt;Http&lt;wbr&gt;.
+&lt;/p&gt;
+
+Značka &lt;wbr&gt; določa kje v tekstu se lahko doda lom vrstice in je nova v HTML5.
+</pre><hr>
+<br><br>
+
+<a name="opis3"></a>
+<h2>Značke za združitev</h2><br>
+<img align="right" src="4predmet-slike\39.png"></img>
+<pre>
+&lt;blockquote&gt;
+Primer:
+&lt;blockquote cite=&quot;http://www.sers.si&quot;&gt;
+1. februarja se je 10 dijakov programov tehnik računalništva in elektrotehnika za tri teden odpravilo v Italijo.
+&lt;/blockquote&gt;
+
+Značka &lt;blockquote&gt; določa del teksta, ki je citiran iz drugega vira.
+</pre><hr>
+<img align="right" src="4predmet-slike\40.png"></img>
+<pre>
+
+&lt;dd&gt;
+Primer:
+&lt;dl&gt;
+  &lt;dt&gt;Kava&lt;/dt&gt;
+  &lt;dd&gt;Temna vroča pijača&lt;/dd&gt;
+  &lt;dt&gt;Mleko&lt;/dt&gt;
+  &lt;dd&gt;Bela hladna pijača&lt;/dd&gt;
+&lt;/dl&gt;
+
+Značka &lt;dd&gt; se uporablja za opis izraza v seznamu. Uporablja se skupaj z značkama &lt;dl&gt; in &lt;dt&gt;.
+</pre><hr>
+<img align="right" src="4predmet-slike\41.png"></img>
+<pre>
+
+&lt;div&gt;
+Primer:
+&lt;div style=&quot;color:#0000FF&quot;&gt;
+  &lt;h3&gt;To je razdelek&lt;/h3&gt;
+  &lt;p&gt;To je odstavek.&lt;/p&gt;
+&lt;/div&gt;
+
+Značka &lt;div&gt; definira del v HTML dokumentu in se uporablja s CSS.
+</pre><hr>
+<img align="right" src="4predmet-slike\42.png"></img>
+<pre>
+
+&lt;dl&gt;
+Primer:
+&lt;dl&gt;
+  &lt;dt&gt;Kava&lt;/dt&gt;
+  &lt;dd&gt;Temna vroča pijača&lt;/dd&gt;
+  &lt;dt&gt;Mleko&lt;/dt&gt;
+  &lt;dd&gt;Bela hladna pijača&lt;/dd&gt;
+&lt;/dl&gt;
+
+Značka &lt;dl&gt; definira opisni seznam in se uporablja skupaj z značkama &lt;dt&gt; in &lt;dd&gt;.
+</pre><hr>
+<img align="right" src="4predmet-slike\43.png"></img>
+<pre>
+
+&lt;dt&gt;
+Primer:
+&lt;dl&gt;
+  &lt;dt&gt;Kava&lt;/dt&gt;
+  &lt;dd&gt;Temna vroča pijača&lt;/dd&gt;
+  &lt;dt&gt;Mleko&lt;/dt&gt;
+  &lt;dd&gt;Bela hladna pijača&lt;/dd&gt;
+&lt;/dl&gt;
+
+Značka &lt;dt&gt; definira ime v seznamu in se uporablja skupaj z značkama &lt;dt&gt; in &lt;dd&gt;.
+</pre><hr>
+<img align="right" src="4predmet-slike\44.png" width="8%"></img>
+<pre>
+
+&lt;figcaption&gt;
+Primer:
+&lt;figure&gt;
+  &lt;img src=&quot;img_pulpit.jpg&quot; alt=&quot;Kamen” width=&quot;304&quot;height=&quot;228&quot;&gt;
+  &lt;figcaption&gt;Fig1. - Pogled na kamen.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+Značka &lt;figcaption&gt; označi napis za element &lt;figure&gt; in je nova v HTML5.
+</pre><hr>
+<img align="right" src="4predmet-slike\45.png" width="8%"></img>
+<pre>
+
+&lt;figure&gt;
+Primer:
+&lt;figure&gt;
+&lt;img src=&quot;img_pulpit.jpg&quot; alt=&quot;Kamen” width=&quot;304&quot;height=&quot;228&quot;&gt;
+&lt;/figure&gt;
+
+Značka &lt;figure&gt; določa samostojno vdelano vsebino, npr. ilustracije, diagrami, fotografije… in je nova v HTML5.
+</pre><hr>
+<img align="right" src="4predmet-slike\46.png" width="14%"></img>
+<pre>
+
+&lt;hr&gt;
+Primer:
+&lt;h1&gt;HTML&lt;/h1&gt;
+&lt;p&gt;HTML je jezik za spletne strani&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;CSS&lt;/h1&gt;
+&lt;p&gt;CSS določa zgled HTML elementov&lt;/p&gt;
+
+Značka &lt;hr&gt; določa tematski prelom na HTML strani, uporablja se za ločenje vsebine.
+</pre><hr>
+<img align="right" src="4predmet-slike\47.png"></img>
+<pre>
+
+&lt;li&gt;
+Primer:
+&lt;ol&gt;
+  &lt;li&gt;Kava&lt;/li&gt;
+  &lt;li&gt;Čaj&lt;/li&gt;
+  &lt;li&gt;Mleko&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+  &lt;li&gt;Kava&lt;/li&gt;
+  &lt;li&gt;Čaj&lt;/li&gt;
+  &lt;li&gt;Mleko&lt;/li&gt;
+&lt;/ul&gt;
+
+Značka &lt;li&gt; določa predmet seznama, uporablja se pri urejenih in neurejenih seznamih.
+</pre><hr>
+<img align="right" src="4predmet-slike\48.png"></img>
+<pre>
+
+&lt;ol&gt;
+Primer:
+&lt;ol&gt;
+  &lt;li&gt;Kava&lt;/li&gt;
+  &lt;li&gt;Čaj&lt;/li&gt;
+  &lt;li&gt;Mleko&lt;/li&gt;
+&lt;/ol&gt;
+
+Značka &lt;ol&gt; definira urejen seznam, lahko označen s števili ali čkrami.
+</pre><hr>
+<img align="right" src="4predmet-slike\49.png"></img>
+<pre>
+
+&lt;p&gt;
+Primer:
+&lt;p&gt;To je besedilo v odstavku.&lt;/p&gt;
+
+Značka &lt;p&gt; definira odstavek, brskalniki avtomatsko dodajo nekaj prostora.
+</pre><hr>
+<img align="right" src="4predmet-slike\50.png"></img>
+<pre>
+
+&lt;pre&gt;
+Primer:
+&lt;pre&gt;
+Besedilo v pre elementu
+ohrani
+definirani    format
+&lt;/pre&gt;
+
+Značka &lt;pre&gt; definira vnaprej določen format, ne glede na pisano obliko.
+</pre><hr>
+<img align="right" src="4predmet-slike\51.png"></img>
+<pre>
+
+&lt;ul&gt;
+Primer:
+&lt;ul&gt;
+  &lt;li&gt;Kava&lt;/li&gt;
+  &lt;li&gt;Čaj&lt;/li&gt;
+  &lt;li&gt;Mleko&lt;/li&gt;
+&lt;/ul&gt;
+
+Značka &lt;ul&gt; definira neurejen seznam.
+</pre><hr>
+<br><br>
+<a name="opis4"></a>
+<h2>Elementi za delitev</h2><br>
+<img align="right" src="4predmet-slike\52.png"></img>
+<pre>
+&lt;address&gt;
+Primer:
+&lt;address&gt;
+Napisal &lt;a        href=&quot;mailto:webmaster@example.com&quot;&gt;Ime Priimek&lt;/a&gt;.&lt;br&gt; 
+Obiščite nas na:&lt;br&gt;
+www.sers.si&lt;br&gt;
+Maribor&lt;br&gt;
+&lt;/address&gt;
+
+Značka &lt;address&gt; definira kontaktne podatke o avtorju/lastniku dokumenta ali članka, 
+odvisno od tega, če je postavljeno v elementu &lt;body&gt; ali &lt;article&gt;.
+</pre><hr>
+<img align="right" src="4predmet-slike\53.png"></img>
+<pre>
+
+&lt;article&gt;
+Primer:
+&lt;article&gt;
+  &lt;h1&gt;Google Chrome&lt;/h1&gt;
+  &lt;p&gt;Google Chrome is a brezplačen spletni brskalnik.&lt;/p&gt;
+&lt;/article&gt;
+
+Značka &lt;article&gt; označi samostojno vsebino, članek in je nov v HTML5.
+</pre><hr>
+<img align="right" src="4predmet-slike\54.png"></img>
+<pre>
+
+&lt;aside&gt;
+Primer:
+&lt;p&gt;Družina me je obiskala v Ljubljani.&lt;/p&gt;&lt;aside&gt;
+  &lt;h4&gt;Ljubljana&lt;/h4&gt;
+  &lt;p&gt;Ljubljana je glavno mesto Slovenije.&lt;/p&gt;
+&lt;/aside&gt;
+
+Značka &lt;aside&gt; označi bolj nepomembne (stranske) podatke in je nova v HTML5.
+</pre><hr>
+<img align="right" src="4predmet-slike\55.png"></img>
+<pre>
+
+&lt;details&gt;
+Primer:
+&lt;details&gt;
+  &lt;summary&gt;Avtorske pravice&lt;/summary&gt;
+  &lt;p&gt; - pripravila dijaka.&lt;/p&gt;
+  &lt;p&gt;Vsebina le stranski podatki.&lt;/p&gt;
+&lt;/details&gt;
+
+Značka &lt;details&gt; določa dodatne podatke, ki jih lahko uporabnik na ukaz skrije in je nova v HTML5.
+</pre><hr>
+<img align="right" src="4predmet-slike\56.png"></img>
+<pre>
+
+&lt;footer&gt;
+Primer:
+&lt;footer&gt;
+  &lt;p&gt;Pripravil: Ime Priimek&lt;/p&gt;
+  &lt;p&gt;Kontaktne informacije: &lt;a href=&quot;mailto:nekdo@primer.si&quot;&gt;
+  nekdo@primer.si&lt;/a&gt;.&lt;/p&gt;
+&lt;/footer&gt;
+
+Značka &lt;footer&gt; definira nogo dokumenta.
+</pre><hr>
+<img align="right" src="4predmet-slike\57.png"></img>
+<pre>
+
+&lt;header&gt;
+Primer:
+&lt;article&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Pomembno glavišče&lt;/h1&gt;
+    &lt;h3&gt;Manj pomembno&lt;/h3&gt;
+    &lt;p&gt;Dodatni podatki&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;p&gt;Besedilo&lt;/p&gt;
+&lt;/article&gt;
+
+Značka &lt;header&gt; predstavlja vsebino za uvodno vsebino in je nova v HTML5.
+</pre><hr>
+<img align="right" src="4predmet-slike\58.png"></img>
+<pre>
+
+&lt;section&gt;
+Primer:
+&lt;section&gt;
+  &lt;h1&gt;SERŠ&lt;/h1&gt;
+  &lt;p&gt;Srednja elektro-računalniška šola&lt;/p&gt;
+&lt;/section&gt;
+
+Značka &lt;section&gt; določa posamezne dele dokumenta, kot so poglavja, glave, noge… Je nova v HTML5.
+</pre><hr>
+<br><br>
+
+<a name="opis5"></a>
+<h2>Značke za tabele</h2><br>
+<img align="right" src="4predmet-slike\59.png"></img>
+<pre>
+&lt;table&gt;
+Primer:
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Mesec&lt;/th&gt;
+    &lt;th&gt;Prihranki&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Januar&lt;/td&gt;
+    &lt;td&gt;100€&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+Značka &lt;table&gt; definira HTML tabelo. Združuje še značke &lt;tr&gt;, &lt;th&gt; in &lt;td&gt; elementov. 
+&lt;tr&gt; definira vrsto, &lt;th&gt; glavo, &lt;td&gt; pa posamezno celico.
+</pre><hr>
+<img align="right" src="4predmet-slike\60.png"></img>
+<pre>
+
+&lt;button&gt;
+Primer:
+&lt;button type=&quot;button&quot;&gt;Klikni!&lt;/button&gt;
+
+Značka &lt;button&gt; definira gumb na katerega je možno klikniti.
+</pre><hr>
+<img align="right" src="4predmet-slike\61.png"></img>
+<pre>
+
+&lt;form&gt;
+Primer:
+&lt;form action=&quot;primer_obrazca.asp&quot; method=&quot;get&quot;&gt;
+  First name: &lt;input type=&quot;text&quot; name=&quot;fime&quot;&gt;&lt;br&gt;
+  Last name: &lt;input type=&quot;text&quot; name=&quot;lime&quot;&gt;&lt;br&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Pošlji&quot;&gt;
+&lt;/form&gt;
+
+Značka &lt;form&gt; se uporablja za ustvarjanje HTML obrazca.
+</pre><hr>
+<img align="right" src="4predmet-slike\62.png"></img>
+<pre>
+
+&lt;textarea&gt;
+Primer:
+&lt;textarea rows=&quot;4&quot; cols=&quot;50&quot;&gt;
+Ta spletni učbenik vas bo naučil o uporabi jezika HTML5.
+&lt;/textarea&gt;
+
+Značka &lt;textarea&gt; označi več vrstno besedilo z možnim vnosom.
+</pre><hr>
+<br><br>
+
+<a name="opis6"></a>
+<h2>Značke za vključevanje vsebine</h2><br>
+<img align="right" src="4predmet-slike\63.png"></img>
+<pre>
+&lt;audio&gt;
+Primer:
+&lt;audio controls&gt;
+  &lt;source src=&quot;horse.ogg&quot; type=&quot;audio/ogg&quot;&gt;
+  &lt;source src=&quot;horse.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+  Vaš brskalnik ne podpira audio značke.
+&lt;/audio&gt;
+
+Značka &lt;audio&gt; definira zvok kot je glasba in je nova v HTML5.
+</pre><hr>
+
+<pre>
+
+&lt;embed&gt;
+Primer:
+&lt;embed src=&quot;dobrodošli.swf&quot;&gt;
+
+Značka &lt;embed&gt; definira vsebino zunanjega vira ali vtičnika in je nova v HTML5.
+</pre><hr>
+<img align="right" src="4predmet-slike\64.png" width="13%"></img>
+<pre>
+
+&lt;video&gt;
+Primer:
+&lt;video width=&quot;320&quot; height=&quot;240&quot;controls&gt;
+ &lt;source src=&quot;film.mp4&quot; type=&quot;video/mp4&quot;&gt;
+ &lt;source src=&quot;film.ogg&quot; type=&quot;video/ogg&quot;&gt;
+  Vaš brskalnik ne podpira značke video.
+&lt;/video&gt;
+</pre><hr>
+<img align="right" src="4predmet-slike\65.png"></img>
+<pre>
+
+&lt;canvas&gt;
+Primer:
+&lt;canvas id=&quot;myCanvas&quot;&gt;&lt;/canvas&gt;
+&lt;script&gt;
+ var canvas = document.getElementById(&quot;myCanvas&quot;);
+ var ctx = canvas.getContext(&quot;2d&quot;);
+ ctx.fillStyle = &quot;#FF0000&quot;;
+ ctx.fillRect(0, 0, 80, 80);
+&lt;/script&gt;
+
+Značka &lt;canvas&gt; se uporablja za risanje grafik preko skripta (navadno JavaScripta) in je nov v HTML5.
+</pre><hr>
+
+</div>
+	<br />	
+	<br><br>
+	
+<a name="Zaključek"></a>
+<div>
+<h1>Zaključek</h1><br />
+<br />
+
+Že od osnovne šole naju je zanimalo računalništvo in spletni jezik. Zato sva si ga izbrala za najino temo. Poglobila sva se v programski jezik HTML5  in spoznala, kako delujejo grafike, forme, font, image in še mnogo drugih zanimivih stvari, ki jih HTML5 ponuja. Spoznavala sva razvoj HTML5, od najbolj preprostih verzij, do modernejših. Spoznala sva, da tako kot se je razvijal HTML, so se izboljševali tudi njegovi moduli. Ves čas pa se je HTML moral prilagajati spremembam v brskalnikih in standardih. Spoznala sva tudi bolj poznane zgradbe o izdelavi in stvaritvi HTML jezika in sva jih nekaj tudi bolj podrobno opisala. Z izdelavo te naloge sva ugotovila, da se je ta programski jezik spreminjal za potrebe ljudi, ki so HTML uporabljali in razvijali.
+
+</div>
+	<br />	<hr>
+	
+</body>
+</html>
